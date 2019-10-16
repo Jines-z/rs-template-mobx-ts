@@ -5,8 +5,8 @@ const FormItem = Form.Item
 
 @inject('Root')
 @observer
-class FromBox extends Component<IProps> {
-    constructor(props: IProps) {
+class FromBox extends Component<IFromProps> {
+    constructor(props: IFromProps) {
         super(props)
     }
 
@@ -35,7 +35,7 @@ class FromBox extends Component<IProps> {
                     )}
                 </FormItem>
                 <FormItem>
-                    <Button className='w100p' type='primary' htmlType='submit' loading={loading}>
+                    <Button href='button' className='w100p' type='primary' htmlType='submit' loading={loading}>
                         登录
                     </Button>
                 </FormItem>
@@ -44,4 +44,4 @@ class FromBox extends Component<IProps> {
     }
 }
 
-export default Form.create()(FromBox)
+export default Form.create<IFromProps>()(FromBox)

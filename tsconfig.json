@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
+    "target"                      : "es5",
+    "module"                      : "esnext",
+    "moduleResolution"            : "node",
+    "jsx"                         : "preserve",
+    "baseUrl"                     : ".",
+    "importHelpers"               : true,
+    "strict"                      : true,
+    "experimentalDecorators"      : true,
+    "esModuleInterop"             : true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "typeRoots": [
+    "sourceMap"                   : true,
+    "allowJs"                     : true,
+    "typeRoots"                   : [
       "./node_modules/@types/",
       "./src/@types/"
     ],

@@ -1,4 +1,4 @@
-import Fly, { FlyError } from 'flyio'
+import Fly from 'flyio'
 import store from '@/store'
 import { message } from 'antd'
 
@@ -22,9 +22,9 @@ Fly.interceptors.request.use(request => {
 Fly.interceptors.response.use(
     response => {
         done()
-        return response.data
+        return response
     },
-    (err: FlyError) => {
+    err => {
         done()
         message.error(`${err.status} ${err.message}`)
     }

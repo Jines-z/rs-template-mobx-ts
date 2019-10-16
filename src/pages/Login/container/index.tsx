@@ -14,10 +14,10 @@ class Login extends Component<IProps> {
         super(props)
     }
 
-    submit = (form): void => {
+    submit = (form: IFromProps): void => {
         const { Root, history } = this.props
         const { updateName, loading } = Root
-        form.validateFields(async(err, values) => {
+        form.validateFields(async(err: any, values: any) => {
             if (!err && !loading) {
                 const { userName, password } = values
                 const param = {
@@ -25,7 +25,7 @@ class Login extends Component<IProps> {
                     password
                 }
                 const result = await service.login(param)
-                if (result.success) {
+                if (result.data.success) {
                     const message = `M&${userName}&${password}`
                     const key = 'react_starter'
                     const session = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA1(message, key))
