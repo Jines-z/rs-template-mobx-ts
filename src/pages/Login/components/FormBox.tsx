@@ -19,7 +19,7 @@ class FromBox extends Component<IFromProps> {
         const { getFieldDecorator } = this.props.form
         const { loading } = this.props.Root
         return (
-            <Form className='w80p m-auto' onSubmit={(): Function => this.handleSubmit}>
+            <Form className='w80p m-auto' onSubmit={this.handleSubmit}>
                 <FormItem>
                     {getFieldDecorator('userName', {
                         rules: [{ required: true, message: '输入admin' }]
@@ -35,7 +35,7 @@ class FromBox extends Component<IFromProps> {
                     )}
                 </FormItem>
                 <FormItem>
-                    <Button href='button' className='w100p' type='primary' htmlType='submit' loading={loading}>
+                    <Button className='w100p' type='primary' htmlType='submit' loading={loading}>
                         登录
                     </Button>
                 </FormItem>
